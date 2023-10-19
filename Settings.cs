@@ -77,9 +77,9 @@ namespace TicketMessenger
             string fullPath = Path.Combine(subFolderPath2, excelFileName);
 
             //variables
-            string senderEmail = "damccue@starkcountyohio.gov";
-            string senderPassword = "Theiceman34$";
-            string recipientEmail = "deoprean@starkcountyohio.gov";
+            string senderEmail = "";
+            string senderPassword = "";
+            string recipientEmail = "";
             string subject = "Weekly Ticket Report Documentation";
             string body = "Hello, Attched is the weekly ticket report.";
 
@@ -94,8 +94,8 @@ namespace TicketMessenger
             Attachment attachment = new Attachment(attachmentPath);
             mail.Attachments.Add(attachment);
 
-            SmtpClient client = new SmtpClient("mailrelay.co.stark.oh.us");
-            client.Port = 25;
+            SmtpClient client = new SmtpClient("");
+            client.Port = 0;
             client.Credentials = new NetworkCredential(senderEmail, senderPassword);
             client.EnableSsl = false;
 
@@ -136,9 +136,9 @@ namespace TicketMessenger
             string fullPath = Path.Combine(subFolderPath2, excelFileName);
 
             //variables
-            string senderEmail = "damccue@starkcountyohio.gov";
-            string senderPassword = "Theiceman34$";
-            string recipientEmail = "rlong@starkcountyohio.gov";
+            string senderEmail = "";
+            string senderPassword = "";
+            string recipientEmail = "";
             string subject = "Weekly Ticket Report Documentation";
             string body = "Attched is the weekly ticket report.";
 
@@ -153,8 +153,8 @@ namespace TicketMessenger
             Attachment attachment = new Attachment(attachmentPath);
             mail.Attachments.Add(attachment);
 
-            SmtpClient client = new SmtpClient("mailrelay.co.stark.oh.us");
-            client.Port = 25;
+            SmtpClient client = new SmtpClient("");
+            client.Port = 0;
             client.Credentials = new NetworkCredential(senderEmail, senderPassword);
             client.EnableSsl = false;
 
