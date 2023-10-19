@@ -33,7 +33,7 @@ namespace TicketMessenger
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
-            connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["DP16959\\SQLEXPRESS"].ConnectionString);
+            connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings[""].ConnectionString);
             connection.Open();
             string queryString = "SELECT * FROM TicketInfo";
 
