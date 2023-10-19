@@ -29,7 +29,7 @@ namespace TicketMessenger
 
         private void submitBttn_Click(object sender, EventArgs e)
         {
-           connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["DP16959\\SQLEXPRESS"].ConnectionString);
+           connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings[""].ConnectionString);
            connection.Open();
 
            string foundID = textboxID.Text;
@@ -47,7 +47,7 @@ namespace TicketMessenger
            }
            connection.Close();
 
-           connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["DP16959\\SQLEXPRESS"].ConnectionString);
+           connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings[""].ConnectionString);
            connection.Open();
            string isReolved = "Yes";
            string updateQuery = "UPDATE TicketInfo SET WasTicketResolved = @isReolved WHERE TicketID = @foundID";
