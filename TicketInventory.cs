@@ -25,7 +25,7 @@ namespace TicketMessenger
         }
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["DP16959\\SQLEXPRESS"].ConnectionString);
+            connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings[""].ConnectionString);
             connection.Open();
 
             SqlCommand cmd = new SqlCommand("SELECT * FROM TicketInfo", connection);
