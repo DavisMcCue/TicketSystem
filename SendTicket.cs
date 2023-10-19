@@ -79,7 +79,7 @@ namespace TicketMessenger
                 DateTime dateComponent = ticketCreationDateTime.Date;
                 string formattedTimeConverted = ticketCreationDateTime.ToString("HH:mm");
 
-                connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["DP16959\\SQLEXPRESS"].ConnectionString);
+                connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings[""].ConnectionString);
                 connection.Open();
 
                 if (SubjectBoxOptions.SelectedItem.ToString() == "Other")
