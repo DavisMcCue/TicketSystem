@@ -66,7 +66,7 @@ namespace TicketMessenger
             string tempPassword = hashedPassword;
             string tempSecurity = saveSecurity;
 
-            connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["DP16959\\SQLEXPRESS"].ConnectionString);
+            connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings[""].ConnectionString);
             connection.Open();
 
             //string insertQuery = "SELECT * FROM Users";
@@ -100,7 +100,7 @@ namespace TicketMessenger
 
         private void DeleteUserFromTable(TextBox DeleteUserTextBox)
         {
-            connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["DP16959\\SQLEXPRESS"].ConnectionString);
+            connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings[""].ConnectionString);
             connection.Open();
 
             string deletesaveUserName = DeleteUserTextBox.Text;
@@ -127,7 +127,7 @@ namespace TicketMessenger
 
         private void resetPassword(TextBox UpdateUserTextBox)
         {
-            connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["DP16959\\SQLEXPRESS"].ConnectionString);
+            connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings[""].ConnectionString);
             connection.Open();
 
             string updateUserPassword = UpdateUserTextBox.Text;
