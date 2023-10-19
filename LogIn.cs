@@ -26,7 +26,7 @@ namespace TicketMessenger
         }
         private void BttnLogIn_Click(object sender, EventArgs e)
         {
-            connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["DP16959\\SQLEXPRESS"].ConnectionString);
+            connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings[""].ConnectionString);
             connection.Open();
 
             string checkUsername = txtUserName.Text;
@@ -68,7 +68,7 @@ namespace TicketMessenger
                     else
                     {
 
-                        connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["DP16959\\SQLEXPRESS"].ConnectionString);
+                        connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings[""].ConnectionString);
                         connection.Open();
 
                         string queryString = "SELECT UserName, PasswordHash, Security_Level FROM Users WHERE UserName = @checkUsername";
@@ -135,7 +135,7 @@ namespace TicketMessenger
 
         private void forgotPassword_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Please contact Clerk of Courts IT");
+            MessageBox.Show("Please contact IT");
         }
 
         private void txtUserName_TextChanged(object sender, EventArgs e)
